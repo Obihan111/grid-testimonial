@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200&family=Lobster&display=swap');
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-size:13px;
+    font-family:'Barlow Semi Condensed', sans-serif;
+
+}
+
+.testimonials{
+    max-width: 1440px;
+    margin:100px auto;
+    padding:20px;
+    display:grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap:30px;
+}
+
+.card{
+    background:hsl(0, 0%, 100%);
+    border-radius:10px;
+    padding:30px;
+    box-shadow:rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+    margin-bottom: 10px;
+
+}
+
+header{
+    display:flex;
+    align-items:center;/* to align vertically the image and the names and verified graduate.*/
+    margin-bottom:10px;
+    
+}
+header h3{
+    font-size:15px;
+    
+
+}
+
+header p{
+    opacity:50%;
+}
+header div{
+    margin-left:10px;
+}
+.image{
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    border:2px solid hsl(263, 55%, 52%);
+}
+
+.main-text{
+    font-weight:500;
+    font-size:1.3rem;
+    line-height:1.5;
+    margin-bottom:20px;
+}
+
+.main-quote{
+    font-size:1.2rem;
+    line-height:1.4rem;
+    opacity:70%;
+    font-weight:500;
+}
+
+.bg-clr-purple{
+    background:hsl(263, 55%, 52%) url("../grid/bg-pattern-quotation.svg");
+    background-repeat:no-repeat;
+    background-position: left 93% top 0%;/* it means 93% from the left and 0% from the top. The horizontal duirection is relative to the left and vertical direction is relative to the top.*/
+    color:#fff;
+}   
+
+.bg-clr-gray-blue{
+    background:hsl(217, 19%, 35%);
+    color:#fff;
+}
+
+.bg-clr-black-blue{
+    background:hsl(219, 29%, 14%);
+    color:#fff;
+}
+
+footer{
+    text-align:center;
+    font-size:1.5rem;
+}
+
+.card:nth-of-type(1){
+    grid-column-start: 1;   /*alrernative syntax- grid-column:1/3 */
+    grid-column-end: 3;
+}
+
+.card:nth-of-type(4){
+    grid-column-start:2;
+    grid-column-end:4;
+    grid-row-start:2;
+    grid-row-end:3;
+}
+
+.card:nth-of-type(5){
+    grid-column-start:4;
+    grid-column-end:5;
+    grid-row-start:1;
+    grid-row-end:3
+}
+
+@media screen and (max-width:768px){
+    .testimonials{
+        grid-template-columns:1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        width:100%;
+    }
+
+    .card:nth-of-type(1){
+        grid-column-start: 1;   /*alrernative syntax- grid-column:1/3 */
+        grid-column-end: 2;
+        grid-row-start:1;
+        grid-row-end: 2;
+    }
+
+    .card:nth-of-type(2){
+        grid-column-start:1;
+        grid-column-end:2;
+        grid-row-start:2;
+        grid-row-end:3;
+    }
+
+    .card:nth-of-type(3){
+        grid-column-start:1;
+        grid-column-end:2;
+        grid-row-start:3;
+        grid-row-end:4;
+    }
+    
+    .card:nth-of-type(4){
+        grid-column-start:1;
+        grid-column-end:2;
+        grid-row-start:4;
+        grid-row-end:5;
+    }
+    
+    .card:nth-of-type(5){
+        grid-column-start:1;
+        grid-column-end:2;
+        grid-row-start:5;
+        grid-row-end:6;
+    }
+
+
+.me{
+    width:100px;
+}
+
+} 
